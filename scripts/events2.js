@@ -31,5 +31,13 @@ var form = document.querySelector('form');
 var email = document.getElementById('email');
 var submit = document.getElementById('submit');
 var para = document.querySelector('#formErrors');
+
+submit.addEventListener("click", function (event) {
+    if (email.value === "") {
+        para.textContent = "Please enter an email!";
+        event.preventDefault();
+    }
+})
+
 /* STEP 2b: Create a script to capture the onsubmit event using preventDefault() */
 // This page inspired by and adapted from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
